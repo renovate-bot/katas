@@ -1,5 +1,5 @@
-from kata import __version__
+from kata.fizz_buzz import iterator
 
 
-def test_version():
-    assert __version__ == '0.1.0'
+def test_fizz_buzz():
+    assert iterator(14) == [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"]
