@@ -6,11 +6,18 @@ def iterator(num):
 
 
 def get_rules():
-    return [
-        MultiplesOfFiveAndThree,
+    return (
+        ContainSeven,
+        ContainFive,
+        ContainThree,
+        MultiplesOfThreeAndFiveAndSeven,
+        MultiplesOfFiveAndSeven,
+        MultiplesOfThreeAndSeven,
+        MultiplesOfThreeAndFive,
+        MultiplesOfSeven,
         MultiplesOfFive,
         MultiplesOfThree,
-    ]
+    )
 
 
 class FizzBuzz:
