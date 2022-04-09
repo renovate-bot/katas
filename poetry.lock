@@ -40,6 +40,14 @@ python-versions = ">=3.7"
 toml = ["tomli"]
 
 [[package]]
+name = "immute"
+version = "0.3.3"
+description = "Create immutable python classes"
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[[package]]
 name = "iniconfig"
 version = "1.1.1"
 description = "iniconfig: brain-dead simple config-ini parsing"
@@ -121,7 +129,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "b9a06e4ce3a65f6281390bc1a57430d80e29677570ee1bd7b62ec321e15273ea"
+content-hash = "2c5c864db23f16eb505c1b075fc47d9430bdb6efeb2171ac0f264b14e53bbf5c"
 
 [metadata.files]
 atomicwrites = [
@@ -178,6 +186,10 @@ coverage = [
     {file = "coverage-6.3.2-cp39-cp39-win_amd64.whl", hash = "sha256:9548f10d8be799551eb3a9c74bbf2b4934ddb330e08a73320123c07f95cc2d92"},
     {file = "coverage-6.3.2-pp36.pp37.pp38-none-any.whl", hash = "sha256:18d520c6860515a771708937d2f78f63cc47ab3b80cb78e86573b0a760161faf"},
     {file = "coverage-6.3.2.tar.gz", hash = "sha256:03e2a7826086b91ef345ff18742ee9fc47a6839ccd517061ef8fa1976e652ce9"},
+]
+immute = [
+    {file = "immute-0.3.3-py3-none-any.whl", hash = "sha256:dbf137a722b6e1c84f65fa27041e99682f6ff3b034a0613b68aa32b61bf284ce"},
+    {file = "immute-0.3.3.tar.gz", hash = "sha256:f1c169c161031425ad2a6a25752ababb5ffe438470fa0a9a63a91ffeaffd93cb"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
