@@ -1,15 +1,29 @@
+from kata.rule import *
+
+
 def iterator(num):
-    return [fizz_buzz(i) for i in range(1, num + 1)]
+    return [FizzBuzz().check(i) for i in range(1, num + 1)]
 
 
-def fizz_buzz(num):
-    if num % 3 == 0 and num % 5 == 0:
-        return "FizzBuzz"
-    if num % 3 == 0:
-        return "Fizz"
-    if num % 5 == 0:
-        return "Buzz"
-    return num
+def get_rules():
+    return [
+        MultiplesOfFiveAndThree,
+        MultiplesOfFive,
+        MultiplesOfThree,
+    ]
+
+
+class FizzBuzz:
+
+    def __init__(self):
+        self.rules = get_rules()
+
+    def check(self, num):
+        for rule in self.rules:
+            result = rule().check(num)
+            if isinstance(result, str):
+                return result
+        return num
 
 
 if __name__ == "__main__":
