@@ -22,3 +22,7 @@ class TestValidBracket:
     def test_should_return_false_when_given_invalid_case_2(self):
         s = "([)]"
         assert Solution().is_valid(s) is False
+
+    def test_should_return_false_when_given_invalid_case_3(self):
+        s = "(])"
+        assert Solution().is_valid(s) is False
