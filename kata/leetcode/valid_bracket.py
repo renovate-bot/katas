@@ -10,6 +10,8 @@ class Solution:
         left_brackets = ["(", "[", "{"]
         right_brackets = [")", "]", "}"]
         stack = []
+        if len(brackets) % 2:
+            return False
         for value in brackets:
             if len(stack) == 0 and value in right_brackets:
                 return False
