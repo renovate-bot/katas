@@ -1,17 +1,21 @@
 class Solution:
 
+    bracket_dict = {
+        ")": "(",
+        "]": "[",
+        "}": "{"
+    }
+
     def is_valid(self, brackets):
+        left_brackets = ["(", "[", "{"]
+        right_brackets = [")", "]", "}"]
         stack = []
         for value in brackets:
-            if len(stack) == 0 and value in [")", "]", "}"]:
+            if len(stack) == 0 and value in right_brackets:
                 return False
-            if value in ["(", "[", "{"]:
+            if value in left_brackets:
                 stack.append(value)
-            elif value == ")" and stack[-1] == "(":
-                stack.pop()
-            elif value == "]" and stack[-1] == "[":
-                stack.pop()
-            elif value == "}" and stack[-1] == "{":
+            elif value in right_brackets and stack[-1] == self.bracket_dict.get(value):
                 stack.pop()
             else:
                 return False
