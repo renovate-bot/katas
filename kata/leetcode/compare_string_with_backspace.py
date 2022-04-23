@@ -1,20 +1,13 @@
+def process_string_in_stack(s, stack_for_string):
+    for i in s:
+        if i != "#":
+            stack_for_string.append(i)
+        else:
+            if stack_for_string:
+                stack_for_string.pop()
+    return stack_for_string
+
+
 class Solution:
     def backspaceCompare(self, s, t):
-        stack_for_s = []
-        stack_for_t = []
-
-        for i in s:
-            if i != "#":
-                stack_for_s.append(i)
-            else:
-                if stack_for_s:
-                    stack_for_s.pop()
-
-        for j in t:
-            if j != "#":
-                stack_for_t.append(j)
-            else:
-                if stack_for_t:
-                    stack_for_t.pop()
-
-        return stack_for_s == stack_for_t
+        return process_string_in_stack(s, []) == process_string_in_stack(t, [])
