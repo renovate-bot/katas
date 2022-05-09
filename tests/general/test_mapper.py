@@ -40,3 +40,19 @@ class TestMapper:
 
         assert to_obj.name == "test"
         assert to_obj.age == 10
+
+    def test_should_map_obj_with_lambda_for_map_key(self):
+        mapper = Mapper(self.from_obj, B, {
+            "name": (lambda x: x.upper())
+        })
+        to_obj = mapper.map()
+
+        assert to_obj.name == "TEST"
+
+    # def test_should_map_obj_with_nest_obj(self):
+    #     mapper = Mapper(self.from_obj, B)
+    #
+    #     to_obj = mapper.map()
+    #
+    #     assert isinstance(to_obj.nest, Target)
+    #     assert to_obj.nest.key == self.from_obj.nest.key
