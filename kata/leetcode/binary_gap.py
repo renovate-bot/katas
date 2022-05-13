@@ -6,8 +6,7 @@ class Solution:
         binary_of_num.pop(0)
         max_dis = 0
         for item in binary_of_num:
-            if (dis := len(item) + 1) > max_dis:
-                max_dis = dis
+            max_dis = max(len(item) + 1, max_dis)
         return max_dis
 
 
