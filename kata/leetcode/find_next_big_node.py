@@ -30,26 +30,35 @@ class LinkedList:
             p = p.next
 
 
-def find_larger(head):
+def find_larger(lst):
     max_value = 0
-    standard = head.val
-    p = head
-    while p:
-        if p.val > standard and p.val > max_value:
-            max_value = p.val
-            return max_value
-        p = p.next
+    standard = lst[0]
+    for i in lst[1:]:
+        if i > standard and i > max_value:
+            return i
     return max_value
 
 
 class Solution:
+    def __init__(self):
+        self.head = None
+
     def nextLargerNodes(self, head: Optional[ListNode]) -> List[int]:
-        h = head
+        self.head = head
         result = []
-        while h:
-            max_value = find_larger(h)
-            result.append(max_value)
-            h = h.next
+        val_in_list = self.push_in_list()
+        while len(val_in_list):
+            result.append(find_larger(val_in_list))
+            val_in_list.pop(0)
+
+        return result
+
+    def push_in_list(self):
+        result = []
+        p = self.head
+        while p:
+            result.append(p.val)
+            p = p.next
         return result
 
 
