@@ -11,3 +11,6 @@ class TestTwoNumbers:
 
     def test_case_3(self):
         assert Solution().twoSum(nums=[3, 3], target=6) == [0, 1]
+
+    def test_case_4(self):
+        assert Solution().twoSum(nums=[-3, 4, 3, 90], target=0) == [0, 2]
