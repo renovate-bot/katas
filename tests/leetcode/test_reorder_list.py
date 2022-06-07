@@ -1,4 +1,5 @@
-from kata.leetcode.reorder_list import Solution, LinkedList
+from kata.leetcode.linked_list import LinkedList
+from kata.leetcode.reorder_list import Solution
 
 
 class TestReorderList:

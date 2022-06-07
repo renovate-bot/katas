@@ -1,4 +1,5 @@
-from kata.leetcode.find_next_big_node import Solution, ListNode, LinkedList
+from kata.leetcode.find_next_big_node import Solution
+from kata.leetcode.linked_list import LinkedList
 
 
 class TestReversedLinkedList:

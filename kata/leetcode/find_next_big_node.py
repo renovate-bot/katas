@@ -7,29 +7,6 @@ class ListNode:
         self.next = next
 
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
-
-    def init_list(self, data):
-        self.head = ListNode(data[0])
-
-        head = self.head
-        p = self.head
-
-        for i in data[1:]:
-            node = ListNode(i)
-            p.next = node
-            p = p.next
-        return head
-
-    def print_list(self):
-        p = self.head
-        while p:
-            print(p.val)
-            p = p.next
-
-
 # def find_larger(lst):
 #     max_value = 0
 #     standard = lst[0]
