@@ -33,3 +33,22 @@ class LinkedList:
             result.append(p.val)
             p = p.next
         return result
+
+
+def get_the_last_node(head):
+    p = head
+    while p.next:
+        p = p.next
+    return p
+
+
+def map_linked_list_to_hash_table(head):
+    p = head
+    index = 0
+    result = {}
+    while p:
+        result.update({index: p})
+        p = p.next
+        index += 1
+
+    return result
