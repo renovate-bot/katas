@@ -1,6 +1,6 @@
 import math
 
-from kata.leetcode.linked_list import LinkedList
+from kata.leetcode.common import LinkedList
 
 
 class ListNode:

@@ -1,4 +1,4 @@
-from kata.leetcode.linked_list import LinkedList
+from kata.leetcode.common import LinkedList
 from kata.leetcode.reorder_list import Solution
 
 
