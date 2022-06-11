@@ -8,7 +8,6 @@ authors = ["Xiaoming Gao <xiaoming.gao@rea-group.com>"]
 python = "^3.10"
 coverage = "^6.3.2"
 immute = "^0.3.3"
-pylint-pydantic = "^0.1.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"

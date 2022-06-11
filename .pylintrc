@@ -4,11 +4,6 @@
 # number of processors available to use.
 jobs=0
 
-# Pylint doesn't seem to be able to read pydantic imports so we need to
-# whitelist the package. https://github.com/samuelcolvin/pydantic/issues/1961
-extension-pkg-whitelist=pydantic
-load-plugins=pylint_pydantic
-
 [FORMAT]
 
 # Maximum number of characters on a single line.
@@ -19,7 +14,8 @@ max-line-length=120
 # Disable the message, report, category or checker with the given id(s).
 disable=missing-docstring,
         too-few-public-methods,
-        invalid-name
+        invalid-name,
+        duplicate-code
 
 [DESIGN]
 max-attributes=20
