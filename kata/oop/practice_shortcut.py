@@ -5,12 +5,12 @@ class BingoCage:
     def __call__(self):
         try:
             return self._item.pop()
-        except IndexError:
-            raise LookupError("pick up from empty BingoCage!")
+        except IndexError as exc:
+            raise LookupError("pick up from empty BingoCage!") from exc
 
 
 def exmaple_for_enumerate():
-    with open("data_for_enumerate.txt", "r") as file:
+    with open("data_for_enumerate.txt", "r", encoding="utf-8") as file:
         for index, line in enumerate(file):
             print(f"No.{index}: {line}")
 

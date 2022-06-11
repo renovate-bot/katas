@@ -1,4 +1,7 @@
-from kata.rule import *
+from kata.rule import ContainSeven, ContainFive, ContainThree,\
+    MultiplesOfThreeAndFiveAndSeven, MultiplesOfFiveAndSeven,\
+    MultiplesOfThreeAndSeven, MultiplesOfThreeAndFive,\
+    MultiplesOfSeven, MultiplesOfFive, MultiplesOfThree
 
 
 def iterator(num):

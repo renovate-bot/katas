@@ -2,9 +2,9 @@ from typing import Optional, List
 
 
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next_node=None):
         self.val = val
-        self.next = next
+        self.next_node = next_node
 
 
 # def find_larger(lst):
@@ -51,7 +51,7 @@ class Solution:
         p = self.head
         while p:
             result.append(p.val)
-            p = p.next
+            p = p.next_node
         return result
 
 

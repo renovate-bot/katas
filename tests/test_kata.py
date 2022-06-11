@@ -1,5 +1,7 @@
 from kata.fizz_buzz import iterator
-from kata.rule import *
+from kata.rule import MultiplesOfFive, MultiplesOfSeven, MultiplesOfThree, MultiplesOfThreeAndFive, \
+    MultiplesOfThreeAndSeven, MultiplesOfFiveAndSeven, MultiplesOfThreeAndFiveAndSeven, ContainThree, ContainFive, \
+    ContainSeven
 
 
 class TestRules:

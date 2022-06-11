@@ -31,6 +31,7 @@ class B:
 
 class TestMapper:
 
+    # pylint: disable=attribute-defined-outside-init
     def setup_method(self):
         self.from_obj = A("test")
 

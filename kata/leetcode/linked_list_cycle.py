@@ -21,7 +21,7 @@ class Solution:
             if not fast or not fast.next:
                 return False
             slow = slow.next
-            fast = fast.next.next
+            fast = fast.next.next_node
         return True
 
 
@@ -33,9 +33,8 @@ class FirstSolution:
         while p:
             if p in linked_list_hash.values():
                 return True
-            else:
-                linked_list_hash.update({index: p})
-                p = p.next
-                index += 1
+            linked_list_hash.update({index: p})
+            p = p.next
+            index += 1
 
         return False

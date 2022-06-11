@@ -17,8 +17,8 @@ def route(arg):
 
 
 @route("/")
-def index(a, b):
-    pass
+def index(event, context):
+    print(event, context)
 
 
 @route("/user")

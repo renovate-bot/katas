@@ -9,7 +9,7 @@ class BasicStack():
         pass
 
     def is_empty(self):
-        return self.pool == []
+        return not self.pool
 
     def size(self):
         return len(self.pool)

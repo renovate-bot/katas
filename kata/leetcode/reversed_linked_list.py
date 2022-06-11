@@ -1,19 +1,19 @@
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next_node=None):
         self.val = val
-        self.next = next
+        self.next_node = next_node
 
     def get_data(self):
         return self.val
 
     def get_next(self):
-        return self.next
+        return self.next_node
 
     def set_data(self, new_data):
         self.val = new_data
 
     def set_next(self, new_next):
-        self.next = new_next
+        self.next_node = new_next
 
 
 class Solution:

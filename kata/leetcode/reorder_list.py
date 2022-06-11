@@ -4,16 +4,16 @@ from kata.leetcode.common import LinkedList
 
 
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next_node=None):
         self.val = val
-        self.next = next
+        self.next_node = next_node
 
 
 def length_of_linked_list(node):
     count = 0
     while node:
         count += 1
-        node = node.next
+        node = node.next_node
     return count
 
 
@@ -23,11 +23,11 @@ class Solution:
         # 1. divide it into two linked list
         p = head
         while length_of_left_list - 1 > 0:
-            p = p.next
+            p = p.next_node
             length_of_left_list -= 1
 
-        head_of_right_list = p.next
-        p.next = None
+        head_of_right_list = p.next_node
+        p.next_node = None
 
         # 2. revert second linked list
         head_of_right_list = self.reverseList(head_of_right_list)
@@ -36,13 +36,13 @@ class Solution:
         p = head
         q = head_of_right_list
         while q:
-            temp = p.next
+            temp = p.next_node
             if q:
                 next_ele = q.next
             else:
                 next_ele = None
             q.next = temp
-            p.next = q
+            p.next_node = q
 
             p = temp
             q = next_ele

@@ -1,7 +1,7 @@
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next_node=None):
         self.val = val
-        self.next = next
+        self.next_node = next_node
 
 
 class LinkedList:
@@ -16,29 +16,29 @@ class LinkedList:
 
         for i in data[1:]:
             node = ListNode(i)
-            p.next = node
-            p = p.next
+            p.next_node = node
+            p = p.next_node
         return head
 
     def print_list(self, head):
         p = head
         while p:
             print(p.val)
-            p = p.next
+            p = p.next_node
 
     def push_in_list(self):
         result = []
         p = self.head
         while p:
             result.append(p.val)
-            p = p.next
+            p = p.next_node
         return result
 
 
 def get_the_last_node(head):
     p = head
-    while p.next:
-        p = p.next
+    while p.next_node:
+        p = p.next_node
     return p
 
 
@@ -48,7 +48,7 @@ def map_linked_list_to_hash_table(head):
     result = {}
     while p:
         result.update({index: p})
-        p = p.next
+        p = p.next_node
         index += 1
 
     return result

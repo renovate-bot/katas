@@ -43,5 +43,5 @@ if __name__ == "__main__":
     bools: List[bool] = [True, True, False]
     print(second(bools))
 
-    'kata/general/generics_practice.py:22: error: Incompatible return value type (got "str", expected "T")'
+    # 'kata/general/generics_practice.py:22: error: Incompatible return value type (got "str", expected "T")'
     # value = third(alphas)

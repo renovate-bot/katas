@@ -13,6 +13,7 @@ class Mapper:
         self.to_obj = to_obj
         self.rules = rules
 
+    # pylint: disable=bare-except
     def map(self):
         target_obj = self.to_obj()
         for key, value in self.get_attr().items():
