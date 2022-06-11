@@ -6,27 +6,27 @@ class ListNode:
     def get_data(self):
         return self.val
 
-    def get_next(self):
+    def get_next_node(self):
         return self.next_node
 
     def set_data(self, new_data):
         self.val = new_data
 
-    def set_next(self, new_next):
-        self.next_node = new_next
+    def set_next_node(self, new):
+        self.next_node = new
 
 
 class Solution:
 
     def reverseList(self, head):
-        if head is None or head.next is None:
+        if head is None or head.next_node is None:
             return head
         current = head
         pre = None
         while current:
             head = current
-            tmp = current.next
-            current.next = pre
+            tmp = current.next_node
+            current.next_node = pre
             pre = current
             current = tmp
         return head

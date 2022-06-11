@@ -38,10 +38,10 @@ class Solution:
         while q:
             temp = p.next_node
             if q:
-                next_ele = q.next
+                next_ele = q.next_node
             else:
                 next_ele = None
-            q.next = temp
+            q.next_node = temp
             p.next_node = q
 
             p = temp
@@ -51,14 +51,14 @@ class Solution:
 
     @staticmethod
     def reverseList(head):
-        if head is None or head.next is None:
+        if head is None or head.next_node is None:
             return head
         current = head
         pre = None
         while current:
             head = current
-            tmp = current.next
-            current.next = pre
+            tmp = current.next_node
+            current.next_node = pre
             pre = current
             current = tmp
         return head

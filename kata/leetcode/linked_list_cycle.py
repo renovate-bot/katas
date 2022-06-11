@@ -8,20 +8,20 @@ from typing import Optional
 class ListNode:
     def __init__(self, x):
         self.val = x
-        self.next = None
+        self.next_node = None
 
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         start = ListNode(0)
-        start.next = head
+        start.next_node = head
         slow = start
-        fast = start.next
+        fast = start.next_node
         while slow != fast:
-            if not fast or not fast.next:
+            if not fast or not fast.next_node:
                 return False
-            slow = slow.next
-            fast = fast.next.next_node
+            slow = slow.next_node
+            fast = fast.next_node.next_node
         return True
 
 
@@ -34,7 +34,7 @@ class FirstSolution:
             if p in linked_list_hash.values():
                 return True
             linked_list_hash.update({index: p})
-            p = p.next
+            p = p.next_node
             index += 1
 
         return False
