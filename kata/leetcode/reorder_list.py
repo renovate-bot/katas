@@ -20,34 +20,21 @@ def length_of_linked_list(node):
 class Solution:
     def reorderList(self, head: ListNode) -> None:
         length_of_left_list = math.ceil(length_of_linked_list(head) / 2)
-        # 1. divide it into two linked list
         p = head
         while length_of_left_list - 1 > 0:
             p = p.next_node
             length_of_left_list -= 1
 
-        head_of_right_list = p.next_node
-        p.next_node = None
+        head_of_right_list, p.next_node = self.reverseList(p.next_node), None
 
-        # 2. revert second linked list
-        head_of_right_list = self.reverseList(head_of_right_list)
+        left, right = head, head_of_right_list
+        while right:
+            next_ele = right.next_node if right else None
+            temp = left.next_node
+            right.next_node, left.next_node = temp, right
+            left, right = temp, next_ele
 
-        # 3. insert each ele
-        p = head
-        q = head_of_right_list
-        while q:
-            temp = p.next_node
-            if q:
-                next_ele = q.next_node
-            else:
-                next_ele = None
-            q.next_node = temp
-            p.next_node = q
-
-            p = temp
-            q = next_ele
-
-        return p
+        return left
 
     @staticmethod
     def reverseList(head):
