@@ -2,7 +2,7 @@ from kata.leetcode.common import LinkedList, get_the_last_node, map_linked_list_
 from kata.leetcode.linked_list_cycle import Solution
 
 
-class TestReorderLRist:
+class TestLinkedListCycle:
 
     def test_case_1(self):
         linked_list = LinkedList()
