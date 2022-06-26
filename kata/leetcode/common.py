@@ -1,3 +1,6 @@
+from typing import List
+
+
 class ListNode:
     def __init__(self, val=0, next_node=None):
         self.val = val
@@ -33,6 +36,47 @@ class LinkedList:
             result.append(p.val)
             p = p.next_node
         return result
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+class Tree:
+    def __init__(self, vals: List):
+        self.root = self.generate_tree(vals)
+
+    @staticmethod
+    def generate_tree(vals):
+        if not len(vals):
+            return None
+
+        root = None
+        queue = []
+
+        fill_left = True
+
+        for val in vals:
+            node = TreeNode(val) if val else None
+
+            if len(queue) == 0:
+                root = node
+                queue.append(node)
+            elif fill_left:
+                queue[0].left = node
+                fill_left = False
+                if node:
+                    queue.append(node)
+            else:
+                queue[0].right = node
+                if node:
+                    queue.append(node)
+                queue.pop(0)
+                fill_left = True
+        return root
 
 
 def get_the_last_node(head):
