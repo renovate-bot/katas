@@ -21,8 +21,8 @@ class Solution:
             node = temp.pop()
             result.append(node.val)
 
-            if node.left:
-                temp.append(node.left)
             if node.right:
                 temp.append(node.right)
+            if node.left:
+                temp.append(node.left)
         return result
